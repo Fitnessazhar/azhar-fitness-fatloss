@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <nav style="padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: absolute; width: 100%; z-index: 100;">
+  <div class="logo">
+    <img src="195068.png" alt="Azhar Fitness Logo" style="height: 80px; filter: drop-shadow(0 0 10px rgba(0,255,153,0.3));">
+  </div>
+  <div class="nav-links">
+    <a href="#plans" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Join Now</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero-content">
+    <h1 style="margin-top: 40px;">30-DAY <span>FAT LOSS</span></h1>
+    <p class="hero-tagline">Engineered for results. Powered by the Azhar Fitness Center methodology.</p>
+    <a href="#plans" class="btn">Start Transformation</a>
+  </div>
+</header>
+
+  <style>
+    :root {
+      --primary: #00ff99;
+      --primary-dark: #00cc7a;
+      --bg-dark: #0a0a0a;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text-main: #ffffff;
+      --text-dim: #b3b3b3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* --- BACKGROUND BLUR EFFECTS --- */
+    .blob {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      background: var(--primary);
+      filter: blur(120px);
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0.15;
+    }
+
+    /* --- HERO SECTION --- */
+    header {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 span {
+      color: var(--primary);
+      display: block;
+    }
+
+    .hero-tagline {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      margin-bottom: 35px;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    /* --- BUTTONS --- */
+    .btn {
+      display: inline-block;
+      padding: 18px 36px;
+      background: var(--primary);
+      color: #000;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 50px;
+      text-transform: uppercase;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 20px rgba(0, 255, 153, 0.2);
+    }
+
+    .btn:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 15px 30px rgba(0, 255, 153, 0.4);
+    }
+
+    /* --- SECTIONS --- */
+    section {
+      padding: 100px 5%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      text-align: center;
+      letter-spacing: -1px;
+    }
+
+    /* --- GRID & CARDS --- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border-color: var(--primary);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin: 15px 0;
+    }
+
+    .price span {
+      font-size: 1rem;
+      color: var(--text-dim);
+    }
+
+    /* --- FORMS/CALCULATOR SECTION --- */
+    .calculator-preview {
+      background: linear-gradient(135deg, #111, #1a1a1a);
+      border-radius: 30px;
+      padding: 50px;
+      text-align: center;
+      border: 2px dashed #333;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 50px;
+      text-align: center;
+      border-top: 1px solid #222;
+      color: var(--text-dim);
+    }
+
+    /* --- UTILITY --- */
+    .highlight { color: var(--primary); }
+    
+    @media (max-width: 768px) {
+      header { height: 70vh; }
+      section { padding: 60px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob" style="top: 10%; left: 10%;"></div>
+  <div class="blob" style="bottom: 10%; right: 10%;"></div>
+
+  <header>
+    <div class="hero-content">
+      <h1>30-DAY <span>FAT LOSS</span></h1>
+      <p class="hero-tagline">Stop guessing. Start tracking. Our automated system calculates your macros and adjusts weekly to ensure you never plateau.</p>
+      <a href="#plans" class="btn">Start Transformation</a>
+    </div>
+  </header>
+
+  <section id="features">
+    <h2>Why <span class="highlight">Azhar Fitness?</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>⚡ Auto-Calculations</h3>
+        <p>No more manual math. Input your weight, and the system handles the rest.</p>
+      </div>
+      <div class="card">
+        <h3>🔄 Weekly Adjustments</h3>
+        <p>If your weight stalls, the program automatically pivots your calories.</p>
+      </div>
+      <div class="card">
+        <h3>🥩 Muscle-First</h3>
+        <p>High-protein protocols designed to strip fat while keeping your muscle mass.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="calculator-preview">
+      <h2>The Digital Coach</h2>
+      <p style="margin-bottom: 30px;">Get access to the Google Sheet system that tracks every gram of protein and every calorie for 30 days.</p>
+      <a href="https://wa.me/917786888111" class="btn" style="background: #fff;">View Demo on WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="plans">
+    <h2 style="text-align: left;">Choose Your <span class="highlight">Level</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>BASIC</h3>
+        <div class="price">₹2,999</div>
+        <ul style="list-style: none; color: var(--text-dim); margin-bottom: 25px;">
+          <li>✓ Auto-Calculator</li>
+          <li>✓ Fat Loss PDF Guide</li>
+          <li>✓ Workout Template</li>
+        </ul>
+        <a href="https://wa.me/917786888111?text=I%20want%20BASIC" class="btn">Join Basic</a>
+      </div>
+
+      <div class="card" style="border-color: var(--primary);">
+        <div style="position: absolute; top: 15px; right: 20px; background: var(--primary); color: #000; padding: 5px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 900;">BEST VALUE</div>
+        <h3>STANDARD</h3>
+        <div class="price">₹4,999</div>
+        <ul style="list-style: none; margin-bottom: 25px;">
+          <li>✓ Everything in Basic</li>
+          <li>✓ <strong>Weekly Check-ins</strong></li>
+          <li>✓ WhatsApp Support</li>
+        </ul>
+        <a href="https://wa.me/917786888111?text=I%20want%20STANDARD" class="btn">Join Standard</a>
+      </div>
+
+      <div class="card">
+        <h3>PREMIUM</h3>
+        <div class="price">₹7,999+</div>
+        <ul style="list-style: none; color: var(--text-dim); margin-bottom: 25px;">
+          <li>✓ Custom Diet Planning</li>
+          <li>✓ 1-on-1 Daily Coaching</li>
+          <li>✓ Training Form Video Review</li>
+        </ul>
+        <a href="https://wa.me/917786888111?text=I%20want%20PREMIUM" class="btn" style="background: transparent; color: #fff; border: 2px solid #fff;">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Azhar Fitness. Build Your Best Self.</p>
+  </footer>
+
+</body>
+</html>
